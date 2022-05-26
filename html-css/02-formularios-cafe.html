@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>HTML - Marcelo Home</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- RESET -->
+		<link rel="stylesheet" type="text/css" href="./css/reset.css">
+		
+		<!-- GOOGLE FONTS -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet"> 
+		
+		<!-- Estilos Personalizados -->
+		<link rel="stylesheet" type="text/css" href="./css/tabelas.css">
+		<link rel="stylesheet" type="text/css" href="./css/layout.css">
+		<link rel="stylesheet" type="text/css" href="./css/modulo-07.css">
+	</head>
+	<body>
+
+		<header>
+			<h2>Curso Front-end</h2>
+			<p>From Zero to Hero</p>
+			<div><h2>EBAC</h2></div>
+			<h5>Escola Britânica de Artes Criativas e Tecnologia</h5>
+			<p>Dev em Full-Stack PYTHON</p>
+		</header>
+
+		<section>
+
+			<nav>
+				<h3>Menu</h3>
+				<ul class="navegacao">
+					<li><a href="00-home-modulo-08-Vicente-Gaspar.html">Home</a></li>
+					<li id="primeiro-link"><a href="01-sobremim.html">Sobre mim</a></li>
+					<li><a href="02-formularios-cafe.html">Formulários</a></li>
+				</ul>
+
+			</nav>
+
+			<article>
+
+				<h1>Contato</h1>
+				<p>Preencha os campos abaixo</p>
+
+				<form method="post">
+
+					<div>
+						<label for="nome">Nome:</label>
+						<input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+						<label for="email">E-mail:</label>
+						<input type="email" name="email" id="email" placeholder="Digite seu email...">
+					</div>
+
+					<div>
+						<label>Qual dia você gostaria de agendar seu café?</label>
+						<select>
+							<option value="Domingo" selected>Domingo</option>
+							<option value="Segunda">Segunda</option>
+							<option value="Terça">Terça</option>
+							<option value="Quarta">Quarta</option>
+							<option value="Quinta">Quinta</option>
+							<option value="Sexta">Sexta</option>
+							<option value="Sabado">Sabado</option>
+						</select>
+					</div>
+
+					<div class="tipo-adocante">
+						<p>
+							<label>Como você gosta de seu café? Escolha um:</label>
+							<input type="radio" name="linguagens" value="adocante"> Adoçante
+							<input type="radio" name="linguagens" value="acucar"> Com Açucar
+							<input type="radio" name="linguagens" value="puro"> Puro
+						</p>
+					</div>
+
+					<div class="tipo-cafe">
+						<p>
+							<label>Quais os tipos de café que gosta? Escolha um ou mais:</label>
+							<input type="checkbox" name="linguagens" value="espresso"> Espresso
+							<input type="checkbox" name="linguagens" value="cappuccino"> Cappuccino
+							<input type="checkbox" name="linguagens" value="macchiato"> Macchiato
+							<input type="checkbox" name="linguagens" value="irishcoffee"> Cafe Irlândes
+						</p>
+					</div>
+
+					<div>
+						<label for="mensagem">Digite abaixo alguma observação:</label>
+						<textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite aqui sua observação..."></textarea>
+					</div>
+
+					<div>
+						<input type="submit" >
+					</div>
+					
+
+				</form>
+
+				
+				
+			</article>
+
+
+		</section>
+
+		<footer>
+			<p>Desenvolvido por Vicente</p>
+		</footer>
+		
+	</body>
+</html>
