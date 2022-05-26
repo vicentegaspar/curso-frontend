@@ -13,5 +13,9 @@ São as ramificações do codigo / Versoes paralelas
 
 - versionamento 0.1.10
 
+git checkout -b novobranch ( cria o branch novobranch)
+git checkout main (muda da branch atual para a main)
 
+### Merge
+mescla branchs
 
