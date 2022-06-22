@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/custom.css">
     <title>Cadastro</title>
 </head>
@@ -45,28 +45,39 @@
                     <div class="row">
                         <div class="col">
                                 <label class="col-form-label col-form-label-sm" for="nome">Nome</label>
-                                <input id="nome" class="form-control" type="text" name="nome" placeholder="Digite seu nome...">
+                                <input id="nome" class="form-control" type="text" name="nome" placeholder="Digite seu nome..." required>
                         </div>
 
                         <div class="col">
-                                <label class="col-form-label col-form-label-sm" for="nome">E-mail</label>
-                                <input id="email" class="form-control" type="text" name="email" placeholder="Digite seu e-mail...">
+                                <label class="col-form-label col-form-label-sm" for="email">E-mail</label>
+                                <input id="email" class="form-control" type="text" name="email" placeholder="Digite seu e-mail..." required>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <label for="endereco" class="col-form-label col-form-label-sm">Endereço completo</label>
-                            <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Endereço Completo...">
+                        <div class="col-7">
+                            <label for="endereco" class="col-form-label col-form-label-sm">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Endereço..." required>
+                        </div>
+                        <div class="col-5">
+                            <label for="complemento" class="col-form-label col-form-label-sm">Complemento</label>
+                            <input type="text" id="complemento" name="complemento" class="form-control" placeholder="Complemento..." required>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
+                        <div class="col-4">
+                            <label for="bairro" class="col-form-label col-form-label-sm">Bairro</label>
+                            <input type="text" id="bairro" name="bairro" class="form-control" placeholder="Bairro..." required>
+                        </div>
+                        <div class="col-5">
                             <label for="cidade" class="col-form-label col-form-label-sm">Cidade</label>
-                            <input type="text" name="cidade" id="cidade" class="form-control">
+                            <input type="text" name="cidade" id="cidade" class="form-control" required>
                         </div>
+                    </div>
+                    <div class="row">
+                        
                         <div class="col">
                             <label for="estado" class="col-form-label col-form-label-sm">Estado</label>
-                            <select name="estado" id="estado" class="form-control">
+                            <select name="estado" id="estado" class="form-control" required>
                                 <option value="">Selecione um Estado</option>
                                 <option value="al">AL</option>
                                 <option value="ce">CE</option>
@@ -77,7 +88,11 @@
                         </div>
                         <div class="col">
                             <label for="cep" class="col-form-label col-form-label-sm">CEP</label>
-                            <input type="text" name="cep" id="cep" class="form-control">
+                            <input type="text" name="cep" id="cep" class="form-control" required>
+                        </div>
+                        <div class="col">
+                            <label for="telefone" class="col-form-label col-form-label-sm">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Telefone..." required>
                         </div>
                     </div>
 
@@ -138,8 +153,10 @@
 
 
     </div>
+
+      
   
 
-    <script src="./bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>

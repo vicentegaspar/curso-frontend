@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/custom.css">
-    <title>Document</title>
+    <title>Web Joias</title>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Logomarca</h1>
+                    <h1>Web Joias</h1>
                 </div>
                 <div class="col">
                     <ul class="nav justify-content-end">
@@ -27,6 +27,53 @@
             </div>
         </div>
     </header>
+
+    <section>
+        <div class="container">
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="ratio ratio-21x9">
+                            <img src="./images/Colar_dourado_ponto_de_luz.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-caption">
+                            <h5>Colar Dourado</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="ratio ratio-21x9">
+                            <img src="./images/Colar_em_ródio_negro_com_cristais_verdes.jpg" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-caption">
+                            <h5>Colar Verde</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="ratio ratio-21x9">
+                            <img src="./images/Colar_prateado_com_cristais_coloridos.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-caption">
+                            <h5>Colar prateado</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>        
+    </section>
 
     <section id="sobre">
         <div class="container">
@@ -239,6 +286,6 @@
         </div>
     </div>     
 
-    <script src="./bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>
