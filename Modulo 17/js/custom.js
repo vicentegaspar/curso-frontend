@@ -1,62 +1,76 @@
 // instancia jquery e evita conflitos
 // jQuery( function($){
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $('.owl-carousel').owlCarousel();
+   $('.owl-carousel').owlCarousel();
 
-    let titulos = $('h4') // tag
-   
-    let itens = $('.featured-item') // class
-    
-    let destaques = $('#featured') // id
+   let titulos = $('h4') // tag
 
-    console.log(titulos.first());
+   let itens = $('.featured-item') // class
 
-    // Configuração de produtos
+   let destaques = $('#featured') // id
 
-    $('.featured-item a').addClass('btn btn-dark stretch-link');
+   console.log(titulos.first());
 
-    $('.featured-item:first h4').append('<span class="badge bg-secondary">Novo</span>')
-    // $('.featured-item:first h4').start('<span class="badge bg-secondary">Novo</span>')
-    // $('.featured-item:first h4').html('<span class="badge bg-secondary">Novo</span>')
-    // $('.featured-item:first h4').addClass('active')
-    // $('.featured-item:first h4').removeClass('active')
-    // $('.featured-item:first h4').toggleClass('active')
-    // $('.featured-item:first h4').hide()
-    // $('.featured-item:first h4').show()
-    // $('.featured-item:first h4').fadeIn(2000)
-    // $('.featured-item:first h4').fadeOut()
-    //  $('.featured-item:first h4').css('color', '#f00')
-     
-     $('.featured-item h4').dblclick( function(){
+   // Configuração de produtos
 
-        $(this).css({
-            'color': '#f00',
-            'background': '#ff0',
-            'font-weight': '100',
-        });
+   $('.featured-item a').addClass('btn btn-dark stretch-link');
 
-     });
+   $('.featured-item:first h4').append('<span class="badge bg-secondary">Novo</span>')
+   // $('.featured-item:first h4').start('<span class="badge bg-secondary">Novo</span>')
+   // $('.featured-item:first h4').html('<span class="badge bg-secondary">Novo</span>')
+   // $('.featured-item:first h4').addClass('active')
+   // $('.featured-item:first h4').removeClass('active')
+   // $('.featured-item:first h4').toggleClass('active')
+   // $('.featured-item:first h4').hide()
+   // $('.featured-item:first h4').show()
+   // $('.featured-item:first h4').fadeIn(2000)
+   // $('.featured-item:first h4').fadeOut()
+   //  $('.featured-item:first h4').css('color', '#f00')
 
-     /*
-      * Manipulação de eventos
-      */
-     $('.featured-item a').on('blur', function(event){
+   $('.featured-item h4').dblclick(function () {
 
-        event.preventDefault();
+      $(this).css({
+         'color': '#f00',
+         'background': '#ff0',
+         'font-weight': '100',
+      });
 
-        alert('Produto esgotado');
+   });
 
-     })
-     
-     
-     
-     
+   /*
+    * Manipulação de eventos
+    */
+   $('.featured-item a').on('blur', function (event) {
 
+      event.preventDefault();
 
+      alert('Produto esgotado');
 
+   })
 
+   /* 
+   * Callback - estendendo acoes que comecam ao termino de outra
+   */
 
+   $('.featured-item:nth(1)')
+      .hide(2000, function () {
+         // esta eh a funcao do callback
+         console.log($(this).find('h4').text() + ' ESGOTADO');
+      })
+      .show(2000, function () {
+         console.log($(this).find('h4').text() + ' em estoque');
+      })
+   })
 
-
-})
+   /*
+   * Animações
+   */
+   const duration = 2000 // equivalente a 2 segundos
+   $('.featured-item:nth(0)')
+   .hide(duration)
+   .show(duration)
+   .fadeOut(duration)
+   .fadeIn(duration)
+   .toggle(duration)
+   .toggle(duration)
