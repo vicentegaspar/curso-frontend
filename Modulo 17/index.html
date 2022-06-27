@@ -214,14 +214,14 @@
         </div>
     </div>
 
-    <div id="contato">
-        <div class="mb-3">
-          <label for="inpitName" class="form-label"></label>
-          <input type="text" class="form-control is-valid|is-invalid" name="inputName" id="inputName">
-          <div class="invalid-feedback">
-              Validation Message
-          </div>
-        </div>
+    <div id="contato" class="visually-hidden">
+        <form action="" class="form">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome">
+              <small id="helpNome" class="text-muted">Digite um nome valido</small>
+            </div>
+        </form>
     </div>
     
 
