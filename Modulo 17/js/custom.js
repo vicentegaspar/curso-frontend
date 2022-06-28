@@ -52,7 +52,7 @@ $(document).ready(function () {
    /* 
    * Callback - estendendo acoes que comecam ao termino de outra
    */
-
+   /*
    $('.featured-item:nth(1)')
       .hide(2000, function () {
          // esta eh a funcao do callback
@@ -62,10 +62,11 @@ $(document).ready(function () {
          console.log($(this).find('h4').text() + ' em estoque');
       })
    })
+   */
 
    /*
    * Animações
-   */
+   
    const duration = 2000 // equivalente a 2 segundos
    $('.featured-item:nth(0)')
    .hide(duration)
@@ -74,3 +75,63 @@ $(document).ready(function () {
    .fadeIn(duration)
    .toggle(duration)
    .toggle(duration)
+   */
+
+   /*
+   * Ouvinte de Eventos para .nav-modal-open
+   */
+   $('.nav-modal-open').on('click', function (e) {
+      e.preventDefault();
+
+      let elem = $(this).attr('rel');
+
+      $('.modal-body').html($('#' + elem).html());
+      $('.modal-header h5.modal-title').html($(this).text());
+
+      let myModal = new bootstrap.Modal($('#modelId'));
+
+      myModal.show();
+
+   });
+
+   // Seleciona o modal que esta no modal body e com form criados de forma dinamica
+   $('body').on('submit', '.modal-body .form', function (e) {
+      e.preventDefault();
+      const inputName = $('#nome');
+      const inputEmail = $('#email');
+
+      if (inputEmail.hasClass('invalid') || inputName.hasClass('invalid')) {
+         return false;
+      } else {
+         $(this).submit();
+      }
+
+
+   });
+   // funcao para validar elementos
+   function validate(elemento) {
+      if (elemento.val() == '') {
+         console.log('O campo '+ elemento.attr('name') +'é obrigatorio');
+         elemento.addClass('invalid');
+         return false;
+
+      }
+   }
+
+   $('body').on('blur', '#nome', function (e) {
+      if ($(this).val() == '') {
+         console.log('O campo nome é obrigatorio');
+         $(this).addClass('invalid');
+         return false;
+
+      }
+   })
+
+   $('body').on('blur', '#email', function (e) {
+      if ($(this).val() == '') {
+         console.log('O campo e-mail é obrigatorio');
+         $(this).addClass('invalid');
+         return false;
+      }
+   })
+});

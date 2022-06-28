@@ -32,10 +32,10 @@
                         <a class="nav-link" href="products.html">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">Sobre nós</a>
+                        <a class="nav-link nav-modal-open" href="about.html" rel="sobre">Sobre nós</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contato</a>
+                        <a class="nav-link nav-modal-open" href="contact.html" rel="contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -206,22 +206,29 @@
                 <div class="modal-body">
                     
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
             </div>
         </div>
     </div>
 
     <div id="contato" class="visually-hidden">
-        <form action="" class="form">
+        <form action="post" class="form">
             <div class="mb-3">
               <label for="nome" class="form-label">Nome</label>
               <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome">
               <small id="helpNome" class="text-muted">Digite um nome valido</small>
             </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Digite seu e-mail" aria-describedby="helpEmail">
+                <small id="helpEmail" class="text-muted">Digite um e-mail valido</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
+    </div>
+
+    <div id="sobre" class="visually-hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis possimus obcaecati dolores ea iste nesciunt facilis fugit nam eum, earum aliquam hic tenetur est, doloribus corrupti nostrum? Maiores, nesciunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis possimus obcaecati dolores ea iste nesciunt facilis fugit nam eum, earum aliquam hic tenetur est, doloribus corrupti nostrum? Maiores, nesciunt!</p>
     </div>
     
 
