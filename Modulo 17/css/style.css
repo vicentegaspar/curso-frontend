@@ -746,3 +746,7 @@ a {
 .invalid {
 	border-color: #F00;
 }
+
+#helpnome, #helpemail, #helpdate, #helptime, #helpcep, #helpphone, #helpcpf {
+	display: none;
+}

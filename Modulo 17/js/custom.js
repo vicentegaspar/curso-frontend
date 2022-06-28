@@ -94,13 +94,34 @@ $(document).ready(function () {
 
    });
 
+   // funcao para validar elementos e esconder / mostrar dicas
+   function validate(elemento) {
+      if (elemento.val() == '') {
+         console.log('O campo ' + elemento.attr('name') + 'é obrigatorio');
+
+         elemento.addClass('invalid');
+         $('#help' + elemento.attr('name')).show();
+
+         return false;
+
+      } else {
+         elemento.removeClass('invalid');
+         $('#help' + elemento.attr('name')).hide();
+
+      }
+   }
+
    // Seleciona o modal que esta no modal body e com form criados de forma dinamica
    $('body').on('submit', '.modal-body .form', function (e) {
       e.preventDefault();
       const inputName = $('#nome');
       const inputEmail = $('#email');
 
+      validate(inputName);
+      validate(inputEmail);
+
       if (inputEmail.hasClass('invalid') || inputName.hasClass('invalid')) {
+         console.log('verificar campos obrigatorios')
          return false;
       } else {
          $(this).submit();
@@ -108,30 +129,46 @@ $(document).ready(function () {
 
 
    });
-   // funcao para validar elementos
-   function validate(elemento) {
-      if (elemento.val() == '') {
-         console.log('O campo '+ elemento.attr('name') +'é obrigatorio');
-         elemento.addClass('invalid');
-         return false;
 
-      }
-   }
 
-   $('body').on('blur', '#nome', function (e) {
-      if ($(this).val() == '') {
-         console.log('O campo nome é obrigatorio');
-         $(this).addClass('invalid');
-         return false;
-
-      }
+   // event listener de blur no id nome
+   $('body').on('blur', '#nome', function () {
+      validate($(this));
    })
 
-   $('body').on('blur', '#email', function (e) {
-      if ($(this).val() == '') {
-         console.log('O campo e-mail é obrigatorio');
-         $(this).addClass('invalid');
-         return false;
-      }
+   // event listener de blur no id email
+   $('body').on('blur', '#email', function () {
+      validate($(this));
    })
+
+   // event listener de blur no id date
+   $('body').on('blur', '#date', function () {
+      validate($(this));
+      $(this).mask('00/00/0000');
+   })
+
+   // event listener de blur no id time
+   $('body').on('blur', '#time', function () {
+      validate($(this));
+      $(this).mask('00:00');
+   })
+
+   // event listener de blur no id cep
+   $('body').on('blur', '#cep', function () {
+      validate($(this));
+      $(this).mask('00000-000');
+   })
+
+   // event listener de blur no id phone
+   $('body').on('blur', '#phone', function () {
+      validate($(this));
+      $(this).mask('00000-0000');
+   })
+
+   // event listener de blur no id cpf
+   $('body').on('blur', '#cpf', function () {
+      validate($(this));
+      $(this).mask('000.000.000-00')
+   })
+
 });
