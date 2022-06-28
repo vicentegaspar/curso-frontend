@@ -141,6 +141,11 @@ $(document).ready(function () {
       validate($(this));
    })
 
+   // event listener de focus do id date
+   $('body').on('focus', '#date', function () {
+      $(this).datepicker();
+   })
+
    // event listener de blur no id date
    $('body').on('blur', '#date', function () {
       validate($(this));
