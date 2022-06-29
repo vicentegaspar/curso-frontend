@@ -95,9 +95,42 @@ $(document).ready(function () {
    });
 
    // funcao para validar elementos e esconder / mostrar dicas
+   /*
+   * - checar se nome é valido (mais de 2 caracteres)
+   * - checar se o email é valido (ao menos um "@" e um "." )
+   */
+
+   function validateNome (elem) {
+
+      if (elem.val().length > 2) {
+         console.log('nome é valido')
+         elem.removeClass('invalid');
+         $('#help' + elem.attr('name')).hide();
+      }else {
+         console.log('nome é invalido')
+         elem.addClass('invalid');
+         $('#help' + elem.attr('name')).show();
+         return false;
+      }
+
+   }
+
+   function validateEmail (elem) {
+      const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i;
+      if (elem.val().match(emailValido)) {
+         console.log('email é valido')
+         elem.removeClass('invalid');
+         $('#help' + elem.attr('name')).hide();
+      }else {
+         console.log('email invalido')
+         elem.addClass('invalid');
+         $('#help' + elem.attr('name')).show();
+         return false;
+      }
+   }
    function validate(elemento) {
       if (elemento.val() == '') {
-         console.log('O campo ' + elemento.attr('name') + 'é obrigatorio');
+         console.log('O campo ' + elemento.attr('name') + ' é obrigatorio');
 
          elemento.addClass('invalid');
          $('#help' + elemento.attr('name')).show();
@@ -105,8 +138,16 @@ $(document).ready(function () {
          return false;
 
       } else {
-         elemento.removeClass('invalid');
-         $('#help' + elemento.attr('name')).hide();
+         if (elemento.attr('name') == 'email') {
+            validateEmail(elemento);
+         }else if (elemento.attr('name') == 'nome'){
+            validateNome(elemento)
+         }else
+         {
+            elemento.removeClass('invalid');
+            $('#help' + elemento.attr('name')).hide();
+
+         }
 
       }
    }
