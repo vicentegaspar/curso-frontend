@@ -124,7 +124,7 @@ a {
 /* Banner Style */
 .banner {
 	margin-top: 50px;
-	background-image: url(../assets/images/banner-bg.jpg);
+	background-image: url(../images/banner-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 150px 0px;
@@ -207,7 +207,7 @@ a {
 
 /* Subscribe Style */
 .subscribe-form {
-	background-color: #3a8bcd;
+	background-color: #ff4901;
 	padding: 80px 0px;
 	text-align: center;
 }
@@ -739,6 +739,10 @@ a {
 
 }
 
+::placeholder {
+	color: #fff
+}
+
 #email {
 	position: relative;
 }
@@ -747,6 +751,6 @@ a {
 	border-color: #F00;
 }
 
-#helpnome, #helpemail, #helpdate, #helptime, #helpcep, #helpphone, #helpcpf {
+.text-muted {
 	display: none;
 }
