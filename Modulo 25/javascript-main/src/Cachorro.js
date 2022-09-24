@@ -1,7 +1,7 @@
 import Animal from './Animal'
 
 
-class Cachorro extends Animal{
+export default class Cachorro extends Animal{
     falar(){
         console.log(this.especie + ' fala au au au')
     }
