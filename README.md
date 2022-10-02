@@ -18,4 +18,16 @@ git checkout main (muda da branch atual para a main)
 
 ### Merge
 mescla branchs
+voce pode precisar resolver conflitos manualmente
+
+git merge main
+
+### Pull Requests
+mescla branchs no repositorio
+Permite Code Review
+O repositorio resolve os conflitos automaticamente
+
+### configura o gitflow
+git flow init
+git flow feature start {nome-da-feature}
 
